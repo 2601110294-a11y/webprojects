@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>가독성 및 지능형웹에 사용되는 시맨틱태크</title>
 </head>
 <body>
-    <form action =01.html method ="post">
-        <fieldset>
-            <legend>회원가입</legend>
-            <table width="300">
-                <tr>
-                    <td><label for="name">성명:</label></td>
-                    <td><input type="text" id="name" name="name"></td>
-                </tr>
-                <tr>
-                    <td><label for="email">이메일:</label></td>
-                    <td><input type="email" id="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td><label for="addr">주소:</label></td>
-                    <td><input type="text" id="addr" name="addr"></td>
-                </tr>
+    <header>
+        <h1>가독성 및 지능형웹에 사용되는 시맨틱태크</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="01.html">01. 폼태그</a></li>
+            <li><a href="02.html">02. 스타일태그</a></li>
+            <li><a href="03.html">03. 시맨틱태그</a></li>
+        </ul>
+    </nav>
+    <section>
+          <article>
+            <h2>폼태그</h2>
+            <p>사용자에게 정보를 입력받거나 서버로 데이터를 전송하기 위해 사용하는 태그입니다</p>
+          </article>
 
-                <tr>
-                    <td>성별</td>
-                    <td><input type="radio" name="gender"value="남성">남성 &nbsp;&nbsp;
-             <input type="radio" name="gender"value="여성">여성<br><br></td>
+            <article>
+                <h2>스타일태그</h2>
+            <p>HTML 문서의 시작적 표현을 정의하기 위해 사용하는 태그입니다</p>
+            </article>
 
-                    </tr>
-                    <tr>
-                <td>취미</td>
-                <td><input type="checkbox" name="hobby1"value="독서">독서 &nbsp;&nbsp;
-             <input type="checkbox" name="hobby2"value="음악">음악 &nbsp;&nbsp;
-             <input type="checkbox" name="hobby3"value="스포츠">스포츠<br><br></td>
-             </tr>
-            <tr>
-                <td><input type="submit" value="가입하기">&nbsp;&nbsp;
-                <input type="reset" value="입력초기화"></td>
-            </tr>
-        
-             
-                
-        </fieldset>
-
-
-    </form>
-</body>
+            <article>
+                <h2>시맨틱태그</h2>
+                <p>HTML 문서의 의미를 명확히 하기 위해 사용하는 태그입니다</p>
+            </article>
+    </section>
+    <footer>
+        <address>
+            서울시 용산구 보광동 한국폴리텍대학
+        </address>
+        <p>Copyright &copy; 2026. All rights reserved.</p>
+    </footer>
+    </body>
 </html>
