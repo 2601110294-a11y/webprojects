@@ -12,11 +12,41 @@
         function addStar(btn){
             btn.textContent += '*';
         }
+        function overchange(btn){
+            btn.style.backgroundColor = 'black';
+            btn.style.color = 'white';
+        }
+        function outchange(btn){
+            btn.style.backgroundColor = 'lightgray';
+            btn.style.color = 'black';
+        }
+        let count = 1;
+        function changeImg(img){
+            count++;
+            if(count ==6){
+                count = 1;
+            }
+            img.src = `img/background_flower${count}.png`;
+ }
+        function showImageSlide(){
+            let img =document.getElementById('img2');
+            setInterval(function(){
+                count++;
+                if(count ==6){
+                    count = 1;
+                }
+                img.src = "img/background_flower" + count + ".png";
+            },2000);
+
+        }
     </script>
 </head>
-<body>
+<body onload = "showImageSlide()">
    <button onclick ="alert('인라인 이벤트 모델')">인라인 이벤트 모델1</button><br><br>
    <button onclick ="greet()">인라인 이벤트 모델2</button><br><br>
    <button onclick="addStar(this)">별 추가</button>
+   <button onmouseover ="overchange(this)" onmouseout = "outchange(this)">배경 및 글자색 변경</button><br>
+   <img src="img/background_flower1.png" width="400" height="300" onclick="changeImg(this)">
+   <img src="img/background_flower1.png" width="400" height="300" id = "img2">
 </body>
 </html>
