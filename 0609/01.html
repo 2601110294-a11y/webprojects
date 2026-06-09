@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인라인 이벤트 모델</title>
     <script>
+
         function greet(){
             alert('안녕하세요~ 인라인 이벤트 모델 2');
         }
@@ -20,25 +21,36 @@
             btn.style.backgroundColor = 'lightgray';
             btn.style.color = 'black';
         }
+
         let count = 1;
         function changeImg(img){
             count++;
             if(count ==6){
                 count = 1;
             }
-            img.src = `img/background_flower${count}.png`;
- }
+            img.src = "img/background_flower" + count + ".png";
+        }
+
         function showImageSlide(){
             let img =document.getElementById('img2');
+            let count2 = 1;
             setInterval(function(){
-                count++;
-                if(count ==6){
-                    count = 1;
+                count2++;
+                if(count2 ==6){
+                    count2 = 1;
                 }
-                img.src = "img/background_flower" + count + ".png";
+                img.src = "img/background_flower" + count2 + ".png";
             },2000);
 
+            let a1 = document.getElementById("a1");
+            a1.onclick = function(event){
+                event.preventDefault();
+             //a태그의 디폴트 이벤트 제거
+            };
+
         }
+        
+        
     </script>
 </head>
 <body onload = "showImageSlide()">
@@ -48,5 +60,6 @@
    <button onmouseover ="overchange(this)" onmouseout = "outchange(this)">배경 및 글자색 변경</button><br>
    <img src="img/background_flower1.png" width="400" height="300" onclick="changeImg(this)">
    <img src="img/background_flower1.png" width="400" height="300" id = "img2">
+   <a href="https://www.naver.com/" id ="a1"> 디폴트 이벤트 제거</a>
 </body>
 </html>
