@@ -31,7 +31,10 @@
                }
              });
                                              
-                  
+            $("a").on("click",function(event){
+               alert("링크가 클릭되었습니다.");
+               event.preventDefault();
+            });      
          }
       );
      </script>
@@ -41,5 +44,6 @@
 </head>
 <body>
    <div id = "box"></div>
+   <a href="https://www.naver.com">Naver homepage</a>
 </body>
 </html>
